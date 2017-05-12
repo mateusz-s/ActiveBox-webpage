@@ -171,7 +171,7 @@ header {
           display: block;
           cursor: pointer;
           position: absolute;
-          right: 30px;
+          right: 5px;
           top: 36px; } }
   header .header-content {
     max-width: 100%;
@@ -318,35 +318,31 @@ header {
   color: #FFFFFF;
   background-color: #53354A; }
   .testimonials .carousel-container {
-    padding-top: 52.6315789474%;
+    padding-top: 70%;
     position: relative;
     overflow: hidden; }
+    @media (min-width: 768px) {
+      .testimonials .carousel-container {
+        padding-top: 52.6315789474%; } }
   .testimonials .carousel-indicators li {
     background-color: #755D6E;
     border-color: #755D6E; }
   .testimonials .carousel-indicators .active {
     background-color: #FFFFFF;
     border-color: #FFFFFF; }
+  .testimonials .carousel-inner {
+    height: 100%; }
+  .testimonials .carousel .item {
+    height: 100%; }
   .testimonials .carousel blockquote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
     padding: 5%;
+    padding-bottom: 40px;
     border: 0;
     margin: 0; }
-    @media (min-width: 480px) {
-      .testimonials .carousel blockquote {
-        padding: 5%; } }
-    @media (min-width: 768px) {
-      .testimonials .carousel blockquote {
-        padding: 15% 5%; } }
-    @media (min-width: 992px) {
-      .testimonials .carousel blockquote {
-        padding: 10%; } }
-    @media (min-width: 1200px) {
-      .testimonials .carousel blockquote {
-        padding: 5%; } }
-    @media (min-width: 1400px) {
-      .testimonials .carousel blockquote {
-        padding-top: 10%;
-        padding-left: 10%; } }
     .testimonials .carousel blockquote p {
       margin-bottom: 10px;
       font-family: "Cardo", serif;
@@ -380,10 +376,14 @@ header {
       .testimonials .carousel blockquote p:after {
         content: close-quote; }
     .testimonials .carousel blockquote span {
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-weight: 700;
-      line-height: 2.1rem;
+      line-height: 1.6rem;
       text-transform: uppercase; }
+      @media (min-width: 576px) {
+        .testimonials .carousel blockquote span {
+          font-size: 1.3rem;
+          line-height: 2.1rem; } }
 
 /* === DOWNLOAD SECTION STYLES === */
 .download {
@@ -414,10 +414,12 @@ footer {
   padding-top: 70px;
   background-color: #3A3E64;
   color: #FFFFFF; }
-  footer .social-media-icons a {
-    color: inherit;
-    border-width: 2px;
-    border-radius: 2px; }
+  footer .social-media-icons {
+    margin-bottom: 20px; }
+    footer .social-media-icons a {
+      color: inherit;
+      border-width: 2px;
+      border-radius: 2px; }
   footer .footer-heading {
     margin-bottom: 20px;
     color: inherit; }

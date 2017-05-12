@@ -238,7 +238,7 @@ header {
                 display: block;
                 cursor: pointer;
                 position: absolute;
-                right: 30px;
+                right: 5px;
                 top: 36px;
             }
         }
@@ -420,9 +420,12 @@ header {
         color: $text-color-white;
         background-color: $carousel-bg-color;
         &-container {
-            padding-top: (500 / 950) * 100%; 
+            padding-top: 70%; 
             position: relative;
             overflow: hidden;
+            @media (min-width: $break-sm) {
+                padding-top: (500 / 950) * 100%; 
+            }
         }
         &-indicators {
             li {
@@ -434,28 +437,21 @@ header {
                 border-color: #FFFFFF;
             }
         }
+        &-inner {
+            height: 100%;
+        }
+        .item {
+            height: 100%;
+        }
         blockquote { 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
             padding: 5%;
+            padding-bottom: 40px;
             border: 0;
             margin: 0;
-            @media (min-width: 480px) {
-                padding: 5%;
-            }
-            @media (min-width: $break-sm) {
-                padding: 15% 5%;
-            }
-            @media (min-width: $break-md) {
-                padding: 10%;
-            }
-            @media (min-width: $break-lg) {
-                padding: 5%;
-            }
-            @media (min-width: 1400px) {
-                padding: {
-                    top: 10%;
-                    left: 10%;
-                }
-            }
             p {
                 margin-bottom: 10px;
                 font: {
@@ -496,11 +492,15 @@ header {
             }
             span {
                 font: {
-                    size: 1.3rem;
+                    size: 1rem;
                     weight: $bold;
                 }
-                line-height: 2.1rem;
+                line-height: 1.6rem;
                 text-transform: uppercase;
+                @media (min-width: 576px) {
+                    font-size: 1.3rem;
+                    line-height: 2.1rem
+                }
             }
         }
     }
@@ -546,11 +546,14 @@ footer {
     padding-top: 70px;
     background-color: $footer-bg-color;
     color: $text-color-white;
-    .social-media-icons a {
-        color: inherit;
-        border: {
-            width: 2px;
-            radius: 2px;
+    .social-media-icons {
+        margin-bottom: 20px;
+        a {
+            color: inherit;
+            border: {
+                width: 2px;
+                radius: 2px;
+            }
         }
     }
     .footer {
@@ -568,7 +571,7 @@ footer {
             background-color: $footer-copyright-bg-color;
             &-paragraph {
                 color: $footer-copyright-color;
-                & i.fa {
+                i.fa {
                     color: $text-color-red;
                 }
             }
