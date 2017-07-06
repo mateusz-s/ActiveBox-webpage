@@ -1,3 +1,4 @@
+//Smooth scrolling
 $(document).on('click', 'a[href^="#"]', function(event){
     event.preventDefault();
     $('body').animate({
@@ -5,6 +6,7 @@ $(document).on('click', 'a[href^="#"]', function(event){
     }, 700);
 });
     
+//Hamburger menu icon
 var navCheck = $('#navigation'),
     navLabel = $('label > i');
 
