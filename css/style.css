@@ -99,7 +99,7 @@ button, header .header-btn, .download-btn {
       background-color: #E84545;
       border-color: #E84545; }
 
-/* === HEADER SECTION STYLES === */
+/* === PAGE HEADER STYLES === */
 header {
   background-image: url("../img/header-bg-img.jpg");
   background-repeat: no-repeat;
@@ -414,7 +414,7 @@ header {
       .download-btn {
         width: 280px; } }
 
-/* === FOOTER STYLES === */
+/* === PAGE FOOTER STYLES === */
 footer {
   padding-top: 70px;
   background-color: #3A3E64;
