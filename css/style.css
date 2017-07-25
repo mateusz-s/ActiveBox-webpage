@@ -88,7 +88,7 @@ button, header .header-btn, .download-btn {
     border: 1px solid #E8ECEE;
     color: #C6CACC;
     font-size: 1.8rem;
-    line-height: 4rem;
+    line-height: 3.8rem;
     text-decoration: none;
     text-align: center;
     -webkit-transition: all .3s;
@@ -422,6 +422,7 @@ footer {
   footer .social-media-icons {
     margin-bottom: 20px; }
     footer .social-media-icons a {
+      line-height: 3.6rem;
       color: inherit;
       border-width: 2px;
       border-radius: 2px; }
