@@ -1,7 +1,7 @@
 //Smooth scrolling
-$(document).on('click', 'a[href^="#"]', function(event){
+$(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
-    $('body').animate({
+    $('**html, body**').animate({ // Bugfix jQuery animate scrolling for Mozilla Firefox
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 700);
 });
@@ -10,12 +10,12 @@ $(document).on('click', 'a[href^="#"]', function(event){
 var navCheck = $('#navigation'),
     navLabel = $('label > i');
 
-$('input').on('click', navIcon);
-
 function navIcon() {
-    if(navCheck.is(':checked')) {
+    if (navCheck.is(':checked')) {
         navLabel.removeClass('fa-bars').addClass('fa-times');
     } else {
         navLabel.removeClass('fa-times').addClass('fa-bars');
     }
 }
+
+$('input').on('click', navIcon);
